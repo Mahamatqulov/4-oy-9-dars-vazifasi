@@ -620,7 +620,7 @@ const teams = [
 
 // const cityResult = askAboutClub("city", "Real Madrid CF");
 // console.log(cityResult);
-
+/*
 // const result = teams.map((team) => {
 //   const change =
 //     !team.name.includes("FC") &&
@@ -631,7 +631,10 @@ const teams = [
 //   return change ? (team.name += " FC") : team.name;
 // });
 // console.log(result);
+*/
 
+// jamoalar nomiga fc qoshadi
+/*
 // const result = teams.map((team) => {
 //   const change =
 //     !team.name.includes("FC") &&
@@ -651,42 +654,80 @@ const teams = [
 //   };
 // });
 // console.log(result);
+*/
 
-function askAboutClub(teamName) {
-  const team = teams.find(
-    (teams) => teams.name.toLowerCase() === teamName.toLowerCase()
-  );
+//jamoa nomini yozsa u haqida malumot chiqaradi
+/*
+// function askAboutClub(teamName) {
+//   const team = teams.find(
+//     (teams) => teams.name.toLowerCase() === teamName.toLowerCase()
+//   );
 
-  if (!team) return `Jamoa "${teamName}" topilmadi.`;
+//   if (!team) return `Jamoa "${teamName}" topilmadi.`;
 
-  const {
-    name,
-    image,
-    stadium: { name: stadiumName, capacity },
-    history,
-    top_scorer: { name: scorerName, goals },
-    trophies,
-    manager,
-    founded,
-    city,
-    colors,
-  } = team;
+//   const {
+//     name,
+//     image,
+//     stadium: { name: stadiumName, capacity },
+//     history,
+//     top_scorer: { name: scorerName, goals },
+//     trophies,
+//     manager,
+//     founded,
+//     city,
+//     colors,
+//   } = team;
 
-  return `
-      Jamoa Nomi: ${name}
-      Jamoa Logosi: ${image}
-      Stadion: ${stadiumName}
-      Muxlislar sig'imi: ${capacity}
-      Jamoa Tarix: ${history}
-      Eng yaxshi to'purari: ${scorerName} (${goals})
-      Yutuqlar: ${JSON.stringify(trophies, null, 2)}
-      Murabbiyi: ${manager}
-      Tashlik topgan yil: ${founded}
-      Qaysi shaharda: ${city}
-      Jamoaning an-anaviy Rangi: ${colors.join(", ")}
-    `.trim();
-}
+//   return `
+//       Jamoa Nomi: ${name}
+//       Jamoa Logosi: ${image}
+//       Stadion: ${stadiumName}
+//       Muxlislar sig'imi: ${capacity}
+//       Jamoa Tarix: ${history}
+//       Eng yaxshi to'purari: ${scorerName} (${goals})
+//       Yutuqlar: ${JSON.stringify(trophies, null, 2)}
+//       Murabbiyi: ${manager}
+//       Tashlik topgan yil: ${founded}
+//       Qaysi shaharda: ${city}
+//       Jamoaning an-anaviy Rangi: ${colors.join(", ")}
+//     `.trim();
+// }
 
-let teamName = prompt("Jamoa nomini kiriting (masalan, Real Madrid CF):");
-let natija = askAboutClub(teamName);
-console.log(natija);
+// let teamName = prompt("Jamoa nomini kiriting (masalan, Real Madrid CF):");
+// let natija = askAboutClub(teamName);
+// console.log(natija);
+*/
+
+//jamoa haqida qanday malumot kerak bolsa shuni chiqaradi
+/*
+// function askAboutClub(teamName, jamoaHaqida) {
+//   const team = teams.find(
+//     (team) => team.name.toLowerCase() === teamName.toLowerCase()
+//   );
+
+//   if (!team) {
+//     return `Jamoa "${teamName}" topilmadi.`;
+//   }
+
+//   const xususiyat = jamoaHaqida.split(".");
+//   let result = team;
+
+//   for (let prop of xususiyat) {
+//     if (result[prop] !== undefined) {
+//       result = result[prop];
+//     } else {
+//       return `"${jamoaHaqida}" uchun ma'lumot topilmadi.`;
+//     }
+//   }
+
+//   return result;
+// }
+
+// let teamName = prompt("Jamoa nomini kiriting (masalan,'Real Madrid CF'):");
+// let jamoaHaqida = prompt(
+//   "Bu jamoa haqida qanday ma'lumot kerak (masalan, 'stadium.name' yoki 'manager'):"
+// );
+
+// let natija = askAboutClub(teamName, jamoaHaqida);
+// console.log(natija);
+*/
